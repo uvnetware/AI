@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +30,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             padding: 15px;
             background-color: black;
             color: white;
@@ -39,39 +40,40 @@
 
         .container {
             text-align: center;
+            max-width: 80%;
+            padding: 20px;
+            margin: auto;
         }
 
         .intro-text {
-            font-size: 3.75rem;
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: bold;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             color: #ffffff;
             animation: fadeIn 3s ease-in-out;
         }
 
         .typing-container {
-            font-size: 1.75rem;
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
             color: #454545;
             display: inline-block;
             white-space: nowrap;
             overflow: hidden;
-            width: 30ch;
+            border-right: 2px solid #304fee;
+            width: 100%;
+            max-width: 30ch;
             animation: type 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
-        }
-
-        .prompt-text {
-            display: inline;
         }
 
         .cursor {
             font-weight: bold;
-            font-size: 1.75rem;
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
             color: #304fee;
         }
 
         .tagline {
-            font-size: 1.75rem;
-            margin-top: 30px;
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+            margin-top: 20px;
             color: #ffffff;
             animation: fadeInUp 1s ease-in-out 3s forwards;
             opacity: 0;
@@ -82,6 +84,7 @@
                 opacity: 0;
                 transform: translateY(-21px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -92,6 +95,7 @@
             from {
                 width: 0;
             }
+
             to {
                 width: 30ch;
             }
@@ -102,8 +106,9 @@
             to {
                 border-color: transparent;
             }
+
             50% {
-                border-color: #fff;
+                border-color: #304fee;
             }
         }
 
@@ -112,9 +117,30 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .intro-text {
+                margin-bottom: 15px;
+            }
+
+            .tagline {
+                margin-top: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            .typing-container {
+                max-width: 25ch;
             }
         }
     </style>
@@ -136,7 +162,150 @@
             "What can AI do for your business?",
             "Experience the future of technology.",
             "Unlock endless possibilities.",
-            "Will be lifetime free!"
+            "Will be lifetime free!",
+            "AI that understands your needs.",
+            "Streamline your operations with AI.",
+            "Empowering businesses through AI.",
+            "AI-driven innovation at your fingertips.",
+            "Revolutionize your business model.",
+            "Transform your customer experience.",
+            "Data-driven decisions made easy.",
+            "AI-powered analytics for success.",
+            "Future-proof your business with AI.",
+            "Innovate faster with AI.",
+            "AI tailored to your industry.",
+            "Discover new opportunities with AI.",
+            "Seamless integration with your workflow.",
+            "AI for every business challenge.",
+            "AI solutions for real-world problems.",
+            "Your AI partner for growth.",
+            "Driving efficiency through AI.",
+            "AI that adapts to your business.",
+            "Smart automation for smart businesses.",
+            "AI for a competitive edge.",
+            "Innovate without limits.",
+            "AI that evolves with your business.",
+            "From data to insights with AI.",
+            "AI at the core of your strategy.",
+            "Maximize ROI with AI.",
+            "AI that scales with your business.",
+            "Turn data into action with AI.",
+            "Future-ready with AI solutions.",
+            "Harness the power of AI.",
+            "AI for the modern enterprise.",
+            "Transform your business with AI.",
+            "AI that empowers decision-makers.",
+            "Driving business intelligence with AI.",
+            "AI-driven transformation starts here.",
+            "Unlock potential with AI solutions.",
+            "Your trusted AI advisor.",
+            "AI that fuels growth.",
+            "Pioneering AI innovation.",
+            "AI for a sustainable future.",
+            "Reshape your business with AI.",
+            "AI that delivers results.",
+            "Strategic AI for your business.",
+            "AI-powered digital transformation.",
+            "AI at the heart of your business.",
+            "Unlock growth with AI-driven insights.",
+            "AI solutions for every industry.",
+            "Accelerate your business with AI.",
+            "AI that drives value.",
+            "Smarter decisions with AI.",
+            "AI for a smarter future.",
+            "Unlock new business models with AI.",
+            "The AI advantage for your business.",
+            "AI that drives innovation.",
+            "AI-powered solutions for every need.",
+            "Future-proofing businesses with AI.",
+            "AI that works for you.",
+            "Strategic growth with AI.",
+            "AI that accelerates change.",
+            "Innovation through AI.",
+            "Your AI partner for success.",
+            "AI that empowers your business.",
+            "AI solutions tailored to you.",
+            "Revolutionizing industries with AI.",
+            "AI-driven insights for better decisions.",
+            "AI for every business size.",
+            "AI solutions that scale.",
+            "Maximize efficiency with AI.",
+            "AI for a data-driven world.",
+            "Innovation powered by AI.",
+            "Your AI transformation partner.",
+            "AI that simplifies complexity.",
+            "Unlock new possibilities with AI.",
+            "AI for a connected world.",
+            "AI that delivers impact.",
+            "Strategic AI solutions for your business.",
+            "Future-ready AI for your business.",
+            "Transforming industries with AI.",
+            "AI solutions for the future.",
+            "AI-powered growth strategies.",
+            "AI that drives change.",
+            "Unlock value with AI.",
+            "AI that adapts to your needs.",
+            "Smart solutions with AI.",
+            "Revolutionary AI for your business.",
+            "AI that drives performance.",
+            "Strategic AI for every business.",
+            "Empowering innovation with AI.",
+            "AI for the future of business.",
+            "AI-driven solutions for success.",
+            "AI that transforms industries.",
+            "Unlock innovation with AI.",
+            "AI-powered solutions for growth.",
+            "AI that drives results.",
+            "AI for the digital age.",
+            "AI solutions that transform.",
+            "Future-focused AI for your business.",
+            "AI for a smarter business.",
+            "AI-driven transformation.",
+            "Unlock growth with AI solutions.",
+            "AI that drives success.",
+            "Strategic AI for your needs.",
+            "AI that powers change.",
+            "AI for a competitive advantage.",
+            "Unlock potential with AI.",
+            "AI-powered business transformation.",
+            "AI that drives innovation.",
+            "AI solutions for your industry.",
+            "AI-driven insights for success.",
+            "AI for every business challenge.",
+            "AI that scales with your needs.",
+            "Smart AI for smarter businesses.",
+            "AI that drives efficiency.",
+            "Revolutionizing business with AI.",
+            "AI solutions for the modern world.",
+            "AI that empowers innovation.",
+            "AI for a better tomorrow.",
+            "AI-driven business growth.",
+            "AI that transforms challenges into opportunities.",
+            "Future-proof your strategy with AI.",
+            "AI-powered solutions for innovation.",
+            "AI that drives change.",
+            "Innovate with AI solutions.",
+            "AI for a connected future.",
+            "AI that scales with your business.",
+            "AI-driven insights for growth.",
+            "AI solutions that empower.",
+            "AI for the digital transformation.",
+            "AI that drives results.",
+            "AI-powered innovation for success.",
+            "AI solutions for the future of business.",
+            "AI that transforms industries.",
+            "Strategic AI for your business needs.",
+            "AI that empowers leaders.",
+            "AI for a smarter tomorrow.",
+            "AI-driven strategies for success.",
+            "AI that drives growth.",
+            "Innovation powered by AI.",
+            "AI solutions for the modern business.",
+            "AI that transforms challenges.",
+            "Strategic AI for your future.",
+            "AI that drives innovation.",
+            "AI for a sustainable future.",
+            "AI-driven transformation for your business."
         ];
 
         let currentPromptIndex = 0;
@@ -163,4 +332,5 @@
         document.addEventListener("DOMContentLoaded", typePrompt);
     </script>
 </body>
+
 </html>
