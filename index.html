@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI by UV Netware is launching soon. Discover the future of technology and how AI can revolutionize your business.">
+    <meta name="keywords" content="AI, technology, innovation, business solutions, UV Netware">
+    <meta name="author" content="UV Netware">
+    <meta property="og:title" content="AI by UV Netware | Launching Soon">
+    <meta property="og:description" content="Discover the future of AI with UV Netware. Our groundbreaking AI technology is coming soon to revolutionize your business solutions.">
+    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/uvnetware.appspot.com/o/UV%20Netware%20Logo.png?alt=media&token=8ab3343d-a1d5-42a0-87b7-db2a132800fd">
+    <meta property="og:url" content="https://ai.uvnetware.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="UV Netware">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI by UV Netware | Launching Soon">
+    <meta name="twitter:description" content="Discover the future of AI with UV Netware. Our groundbreaking AI technology is coming soon to revolutionize your business solutions.">
+    <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/uvnetware.appspot.com/o/UV%20Netware%20Logo.png?alt=media&token=8ab3343d-a1d5-42a0-87b7-db2a132800fd">
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/uvnetware.appspot.com/o/UV%20Netware%20Logo.png?alt=media&token=8ab3343d-a1d5-42a0-87b7-db2a132800fd" type="image/png">
+    <title>AI by UV Netware | Launching Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .intro-text {
+            font-size: 3.75rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #ffffff;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .typing-container {
+            font-size: 1.75rem;
+            color: #454545;
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 30ch;
+            animation: type 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+        }
+
+        .prompt-text {
+            display: inline;
+        }
+
+        .cursor {
+            font-weight: bold;
+            font-size: 1.75rem;
+            color: #304fee;
+        }
+
+        .tagline {
+            font-size: 1.75rem;
+            margin-top: 30px;
+            color: #ffffff;
+            animation: fadeInUp 1s ease-in-out 3s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-21px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes type {
+            from {
+                width: 0;
+            }
+            to {
+                width: 30ch;
+            }
+        }
+
+        @keyframes blink {
+            from,
+            to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #fff;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="intro-text">Introducing AI by UV Netware</h1>
+            <div class="typing-container">
+                <span class="prompt-text" id="promptText"></span><span class="cursor">|</span>
+            </div>
+            <p class="tagline">Launching Soon.</p>
+        </div>
+    </div>
+
+    <script>
+        const prompts = [
+            "What can AI do for your business?",
+            "Experience the future of technology.",
+            "Unlock endless possibilities.",
+            "Will be lifetime free!"
+        ];
+
+        let currentPromptIndex = 0;
+        let currentCharIndex = 0;
+        const typingSpeed = 100;
+        const delayBetweenPrompts = 2100;
+
+        function typePrompt() {
+            const promptTextElement = document.getElementById('promptText');
+
+            if (currentCharIndex < prompts[currentPromptIndex].length) {
+                promptTextElement.textContent += prompts[currentPromptIndex].charAt(currentCharIndex);
+                currentCharIndex++;
+                setTimeout(typePrompt, typingSpeed);
+            } else {
+                setTimeout(() => {
+                    currentCharIndex = 0;
+                    promptTextElement.textContent = '';
+                    currentPromptIndex = (currentPromptIndex + 1) % prompts.length;
+                    typePrompt();
+                }, delayBetweenPrompts);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", typePrompt);
+    </script>
+</body>
+</html>
