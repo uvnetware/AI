@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Error | Page Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        .error-text {
+            font-size: 5.75rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ffffff;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .message-text {
+            font-size: 1.5rem;
+            color: #b0b0b0;
+            margin-bottom: 30px;
+        }
+
+        .back-link {
+            font-size: 1.25rem;
+            color: #304fee;
+            text-decoration: none;
+            border: 1.75px solid #304fee;
+            padding: 12px 21px;
+            border-radius: 5.75px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: #304fee;
+            color: #ffffff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="error-text">404</h1>
+            <p class="message-text">Oops! The page you are looking for does not exist. It might have been moved or deleted.</p>
+            <a href="https://uvnetware.com/" class="back-link">Back to Home</a>
+        </div>
+    </div>
+</body>
+
+</html>
