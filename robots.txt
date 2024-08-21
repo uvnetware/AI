@@ -210,9 +210,6 @@ Allow: /services/
 
 # Sitemap locations for comprehensive indexing
 Sitemap: https://ai.uvnetware.com/sitemap.xml
-Sitemap: https://ai.uvnetware.com/blog-sitemap.xml
-Sitemap: https://ai.uvnetware.com/news-sitemap.xml
-Sitemap: https://ai.uvnetware.com/products-sitemap.xml
 
 # Specify crawl delay to optimize server load and crawling efficiency
 Crawl-delay: 5
